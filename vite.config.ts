@@ -1,11 +1,9 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// Standard Vite config for Vercel deployment
+// Minimal configuration to use pre-installed packages only
 export default defineConfig({
   plugins: [
-    react(),
     tsconfigPaths()
   ],
   resolve: {
@@ -13,4 +11,7 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  build: {
+    outDir: "dist",
+  }
 });
