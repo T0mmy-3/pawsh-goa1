@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// Minimal configuration to use pre-installed packages only
 export default defineConfig({
   plugins: [
+    react(),
     tsconfigPaths()
   ],
   resolve: {
